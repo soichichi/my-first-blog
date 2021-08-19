@@ -1,6 +1,6 @@
 h1 a, h2 a {
     color: #C25100;
-    font-family: 'Abril Fatface';
+    font-family: 'Lobster';
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Lobster', cursive;
 }
 
 .date {
