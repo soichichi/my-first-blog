@@ -4,6 +4,10 @@ from django.utils import timezone
 from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
+from django.contrib.auth.decorators import login_required #追加① 新たにimport
+
+@login_required #追加②
+#これ以降の記述はログインしないと処理されません。
 # Create your views here.
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -39,3 +43,6 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def home(request):
+    return render(request, 'blog/base.html')

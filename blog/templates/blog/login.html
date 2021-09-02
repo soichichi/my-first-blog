@@ -1,0 +1,19 @@
+{% load static %}
+<html　lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Django std blog　ログインページ</title>
+    <link rel="stylesheet" href=>
+  </head>
+  <body>
+    <h1>ログイン画面</h1>
+    <form action='' method='POST'>
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button>ログイン</button>
+    </form>
+  </body>
+</html>
