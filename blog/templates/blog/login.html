@@ -4,10 +4,13 @@
   <head>
     <meta charset="utf-8">
     <title>Django std blog　ログインページ</title>
-    <link rel="stylesheet" href=>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
   </head>
   <body>
-    <h1>ログイン画面</h1>
+    <h1>Django std blog ログイン画面</h1>
     <form action='' method='POST'>
 
     {% csrf_token %}

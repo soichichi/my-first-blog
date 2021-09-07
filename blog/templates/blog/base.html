@@ -14,6 +14,15 @@
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
         </div>
+        <div class = "login">
+            <h2>HOME画面</h2>
+            {% if user.is_authenticated %}
+                <p>{{ user.get_username }}でログイン中</p>
+                <a href="/accounts/logout">ログアウトする</a>
+            {% else %}
+                <p>ログインしていません</p>
+            {% endif %}
+        </div>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
@@ -23,7 +32,7 @@
                             <div class="date">
                                 <p>published: {{ post.published_date }}</p>
                             </div>
-                            <h2><a href="">{{ post.title }}</a></h2>
+                            <h3><a href="">{{ post.title }}</a></h3>
                             <p>{{ post.text|linebreaksbr }}</p>
                         </div>
                     {% endfor %}
