@@ -18,7 +18,7 @@
             <h2>HOME画面</h2>
             {% if user.is_authenticated %}
                 <p>{{ user.get_username }}でログイン中</p>
-                <a href="/accounts/logout">ログアウトする</a>
+                <a href="/logout">ログアウトする</a>
             {% else %}
                 <p>ログインしていません</p>
             {% endif %}
