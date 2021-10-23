@@ -1,5 +1,9 @@
 {% extends 'blog/base.html' %}
 
+{% block header %}
+<a href="/">Django std Blog 作成画面(編集画面)</a>
+{% endblock %}
+
 {% block content %}
     <h2>New post</h2>
     <form method="POST" class="post-form">{% csrf_token %}

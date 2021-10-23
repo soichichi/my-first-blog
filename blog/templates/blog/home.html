@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="page-header">
-            <h1>{% block header %}<a href="/">Django std Blog　ホーム画面</a>{% endblock %}</h1>
+            <h1><a href="home/">Django std Blog ホーム画面</a></h1>
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
@@ -23,23 +23,10 @@
                 <p>ログインしていません</p>
             {% endif %}
         </div>
-
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                    <!-- {% for post in posts %}
-                        <div class="post">
-                            <div class="date">
-                                <p>published: {{ post.published_date }}</p>
-                            </div>
-                            <h3><a href="">{{ post.title }}</a></h3>
-                            <p>{{ post.text|linebreaksbr }}</p>
-                        </div>
-                    {% endfor %} -->
-                {% endblock %}
-                </div>
-            </div>
-        </div>
     </body>
 </html>
+    
+
+
+
+
