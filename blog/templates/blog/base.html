@@ -10,7 +10,7 @@
     <body>
         <div class="page-header">
             <h1>{% block header %}<a href="/">Django std Blog ホーム画面</a>{% endblock %}</h1>
-            {% if user.is_authenticated %}
+            {% if user.is_superuser %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
         </div>

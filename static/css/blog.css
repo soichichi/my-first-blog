@@ -50,6 +50,8 @@ h1, h2, h3, h4 {
     margin-bottom: 70px;
     max-width: 98%;
     overflow-wrap: break-all;
+    word-break: break-word;
+    word-wrap: break-word;
 }
 
 .post h2 a, .post h2 a:visited {
